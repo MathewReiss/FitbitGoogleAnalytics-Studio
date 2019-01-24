@@ -13,7 +13,8 @@ Using additional parameters: https://developers.google.com/analytics/devguides/c
 1. Go to google analytics admin console. Then select your app -> Custom Dimensions
 
     - You can set the name to anything you want. What really matters in the `index` number.
-    ***Note:*** The defaults in this are as follows: `Device Model`, `Gender`, `User Age`, `Phone OS`.
+    
+ ***Note:*** The defaults in this are as follows: `Device Model`, `Gender`, `User Age`, `Phone OS`.
     
    
 ![Custom Dimensions](https://drive.google.com/file/d/1qw-1PRfSv-z4O48SNX7BNTULPyFqi0N7/preview)
