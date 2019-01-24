@@ -16,7 +16,8 @@ const debug = true
 // Global options
 let tracking_id = null
 let data_source = null
-let user_language = null
+let an = null
+//let user_language = null
 let custom_dimensions = []
 let custom_metrics = []
 let include_queue_time = "sometimes"
@@ -32,8 +33,9 @@ try {
 // Update global options
 const configure = options => {
   tracking_id = options.tracking_id || tracking_id
+  an = options.an || an
   data_source = options.data_source || data_source
-  user_language = options.user_language || user_language
+  //user_language = options.user_language || user_language
   custom_dimensions = options.custom_dimensions || custom_dimensions
   custom_metrics = options.custom_metrics || custom_metrics
   include_queue_time = options.include_queue_time || include_queue_time
@@ -48,12 +50,14 @@ const send = (options) => {
   debug && console.log("App --> Companion")
   debug && console.log("Tracking ID: " + tracking_id)
   debug && console.log("Client ID: " + client_id)
+  debug && console.log("Application Name: " + an)
   const data = options
   // Add global options
   data.tracking_id = tracking_id
   data.client_id = client_id
+  data.an = an
   data.data_source = data_source
-  data.user_language = user_language
+  //data.user_language = user_language
   data.include_queue_time = include_queue_time
   // Add calculated parameters
   data.screen_resolution = device.screen ? (device.screen.width + "x" + device.screen.height) : "348x250"
@@ -89,6 +93,17 @@ const onload = () => {
   })
 }
 
+// Send a hit on unload
+appbit.addEventListener("unload", () => {
+  send({
+    hit_type: "event",
+    event_category: "Lifecycle",
+    event_action: "Unload",
+    event_label: "Unload"
+  })
+})
+
+/*
 // Send a hit each time the display turns on
 display.addEventListener("change", () => {
   if (display.on) {
@@ -101,15 +116,7 @@ display.addEventListener("change", () => {
   }
 })
 
-// Send a hit on unload
-appbit.addEventListener("unload", () => {
-  send({
-    hit_type: "event",
-    event_category: "Lifecycle",
-    event_action: "Unload",
-    event_label: "Unload"
-  })
-})
+
 
 // Send a hit on button press
 document.addEventListener("keypress", (e) => {
@@ -122,7 +129,7 @@ document.addEventListener("keypress", (e) => {
     event_label: e.key === "up" ? "Up" : "Down"
   })
 })
-
+*/
 //====================================================================================================
 // Exports
 //====================================================================================================
