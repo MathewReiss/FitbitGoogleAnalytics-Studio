@@ -1,7 +1,9 @@
 import { inbox } from "file-transfer";
 import { encode } from "cbor";
-
+import { locale } from "user-settings";
+import { me, host } from "companion";
 const debug = true
+
 
 //TODO
 //asap.onmessage = message => {
@@ -12,8 +14,10 @@ const sendToGoogle = (message) => {
     "v=1",
     "tid=" + message.tracking_id,
     "cid=" + message.client_id,
+    "an=" + message.an,
     "t=" + message.hit_type,
-    "sr=" + message.screen_resolution
+    "sr=" + message.screen_resolution,
+    "ul=" + locale.language
   ]
   // Add event parameters
   if (message.hit_type == "event") {
@@ -30,13 +34,16 @@ const sendToGoogle = (message) => {
     query.push("ds=" + message.data_source)
   }
   // Handle the user language
-  if (message.user_language) {
+  /*if (message.user_language) {
     query.push("ul=" + message.user_language)
-  }
+  }*/
   // Handle custom dimensions
   for (let dimension of message.custom_dimensions) {
     query.push("cd" + dimension.index + "=" + dimension.value)
   }
+  // Get Phone OS
+  query.push("cd4=" + me.host.os.name)
+  
   // Handle custom metrics
   for (let metric of message.custom_metrics) {
     query.push("cm" + metric.index + "=" + metric.value)
