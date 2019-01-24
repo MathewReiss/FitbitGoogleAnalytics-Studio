@@ -12,7 +12,7 @@ demotext.text = "Fitbit Studio rocks!"
 analytics.configure({
   tracking_id: "UA-XXXXXXXXX-1",
   sr: device.screen.width + "x" + device.screen.height,
-  an: "Simply Tungsten",
+  an: "Your App Name",
   custom_dimensions: [
     {index: 1, value: device.modelName},
     {index: 2, value: user.gender},
