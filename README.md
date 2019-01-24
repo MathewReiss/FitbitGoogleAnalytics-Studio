@@ -12,10 +12,12 @@ Go to google analytics admin console. Then select your app -> Custom Dimensions
 
 You can set the name in here to anything you want. What really matters in the `index` number.
     The defaults in this are as follows; `Device Model`, `Gender`, `User Age`, `Phone OS`
+    
+    https://drive.google.com/file/d/1qw-1PRfSv-z4O48SNX7BNTULPyFqi0N7/preview
 
-    I noticed that using Google Data Studio was the easiest way to make custom reports. 
+I noticed that using Google Data Studio was the easiest way to make custom reports. 
     Link: https://datastudio.google.com/navigation/reporting
 
-    You have to play around with it a little but this is how I have mine set up.
+You'll have to play around with it a little but this is how I have mine set up.
 
-    
+    https://drive.google.com/file/d/1qDCB9Xhu1_g4pWkNpsUEk9lQ7WlmiwgD/preview
