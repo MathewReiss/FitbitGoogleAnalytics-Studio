@@ -17,7 +17,7 @@ Using additional parameters: https://developers.google.com/analytics/devguides/c
  ***Note:*** The defaults in this are as follows: `Device Model`, `Gender`, `User Age`, `Phone OS`.
     
    
-https://drive.google.com/file/d/1qw-1PRfSv-z4O48SNX7BNTULPyFqi0N7/preview
+![Custom Dimension Indexes](https://i.imgur.com/t6nSI36.png)
 
 -----------
 
@@ -28,4 +28,6 @@ I noticed that using Google Data Studio was the easiest way to make custom repor
 
 You'll have to play around with it a little but this is how I have mine set up.
 
-  https://drive.google.com/file/d/1qDCB9Xhu1_g4pWkNpsUEk9lQ7WlmiwgD/preview
+  ![Basic Table setup](https://i.imgur.com/E4kqt27.jpg)
+  
+  ![User count setup](https://i.imgur.com/bxTftsD.png)
