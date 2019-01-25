@@ -12,7 +12,7 @@ demotext.text = "Fitbit Studio rocks!"
 analytics.configure({
   tracking_id: "UA-XXXXXXXXX-1",
   sr: device.screen.width + "x" + device.screen.height,
-  an: "Your_App_Name", //The Ionic does not like space in the file name
+  an: "Your_App_Name", //The Ionic does not like spaces in the file name
   custom_dimensions: [
     {index: 1, value: device.modelName},
     {index: 2, value: user.gender},
