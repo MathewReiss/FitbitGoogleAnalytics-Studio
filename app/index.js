@@ -8,7 +8,7 @@ import { user } from "user-profile"
 
 import { me } from "appbit";
 
-let userGender;
+var userGender;
 var userAge;
 
 
