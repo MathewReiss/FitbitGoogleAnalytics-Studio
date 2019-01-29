@@ -13,13 +13,23 @@ var userAge;
 
 
 if (!me.permissions.granted("access_user_profile")) {
-  console.log("We're not allowed to read a users' profile");
+  console.log("We're not allowed to read a users' profile!");
   var userGender = "UNK";
   var userAge = "UNK";
 }
 else {
-  var userGender = user.gender;
-  var userAge = user.age;
+      if (user.gender == "undefined") {
+        var userGender = "UNK";
+      }
+      else {
+        var userGender = user.gender;  
+      }
+      if (user.age == "undefined") {
+        var userAge = "UNK";
+      }
+      else {
+        var userAge = user.age;
+      }
 }
 
 let demotext = document.getElementById("demotext")
