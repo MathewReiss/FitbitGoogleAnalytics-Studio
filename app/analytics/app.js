@@ -66,8 +66,8 @@ const send = (options) => {
   data.custom_dimensions = options.custom_dimensions ? custom_dimensions.concat(options.custom_dimensions) : custom_dimensions
   data.custom_metrics = options.custom_metrics ? custom_metrics.concat(options.custom_metrics) : custom_metrics
   
-  const filename = "_google_analytics_" + data.an + ".txt"
-  //const filename = "_google_analytics_" + (Math.floor(Math.random() * 10000000000000000)) + ".txt"
+  //const filename = "_google_analytics_" + data.an + ".txt"
+  const filename = "_google_analytics_" + (Math.floor(Math.random() * 10000000000000000)) + ".txt"
   sendFile(filename, data)
 }
 
