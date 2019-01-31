@@ -8,14 +8,8 @@ import { user } from "user-profile"
 
 import { me } from "appbit";
 
-var userGender;
-var userAge;
-
-
 if (!me.permissions.granted("access_user_profile")) {
   console.log("We're not allowed to read a users' profile!");
-  var userGender = "UNK";
-  var userAge = "UNK";
 }
 else {
       if (user.gender == "undefined") {
