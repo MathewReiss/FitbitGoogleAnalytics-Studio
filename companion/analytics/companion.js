@@ -44,6 +44,9 @@ const sendToGoogle = (message) => {
   // Get Phone OS
   query.push("cd4=" + me.host.os.name)
   
+  // Track Client IDs for Google Data Studio
+  query.push("cd5=" + message.client_id)
+  
   // Handle custom metrics
   for (let metric of message.custom_metrics) {
     query.push("cm" + metric.index + "=" + metric.value)
